@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--Importar los iconos de google-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+  <!--instalamos jquery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+   <?!= include("B.-codigo-css");?>
+
+</head>
+  <body>
+  <!--agregamos una barra de navegación-->
+  <nav class="blue darken-2"> <!-- color -->
+    <div class="nav-wrapper container"> <!--container = centrado -->
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--agregamos una barra de lateral-->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#"><i class="material-icons left">send</i>Sass</a></li>
+    <li><a href="#">Components</a></li>
+    <li><a href="#">Javascript</a></li>
+    <li><a href="#"><i class="material-icons left">archive</i>Mobile</a></li>
+  </ul>
+    
+  	<!-- para poner tarjeta-->
+    <div class="container section">
+      <div class="row">
+          <form class="col s12">
+                    <div class="row card-panel  sombreadoGrueso">
+
+                        <!--aqui estamos insertando el file-->
+                        <div class="file-field input-field col s12 m6 l6">
+                          <div class="btn">
+                            <i class="material-icons left">system_update_alt</i>
+                            <span>Archivo</span>
+                            <input id="files" type="file" name="miArchivo">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Seleccione un archivo de su computadora">
+                          </div>
+                        </div>
+                    </div> <!--tarjeta fin--> 
+
+                    <!-- importante el boton va dentro del form, arriba /form y fuera de tarjeta --> 
+                    <button type="submit" id="boton1" src="" value="Subir Archivos" class="btn sombreadoGrueso" 
+                    onclick="google.script.run.subiendoArchivos(this.parentNode);return false">EnviarAdjuntos</button> 
+          </form>
+
+      </div>
+    </div>
+  
+    <!-- Archivos JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <?!= include("D.-java-script");?>
+    <?!= include("C.-materialize-js");?>
+
+  </body>
+</html>
